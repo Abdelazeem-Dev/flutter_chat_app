@@ -10,7 +10,8 @@ import '../widgets/custom_textfield.dart';
 import 'chat_screen.dart';
 
 class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+  
+ LoginScreen({super.key});
 
   static String id = 'login_screen';
   String? email;

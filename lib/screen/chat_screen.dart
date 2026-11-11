@@ -1,9 +1,6 @@
-import 'dart:math';
 
 import 'package:chat_app/widgets/chat_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
-
 import '../models/text_model.dart';
 import '../widgets/custom_text.dart';
 
