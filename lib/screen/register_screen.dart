@@ -1,4 +1,5 @@
 import 'package:chat_app/cubit/cubit/register_cubit.dart';
+import 'package:chat_app/screen/chat_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../helper/show_snack_bar.dart';
 import '../models/text_model.dart';
 import '../widgets/custom_textfield.dart';
-import 'chat_screen.dart';
+
 class RegisterScreen extends StatelessWidget {
     RegisterScreen({super.key});
 String ?email,password;
@@ -25,7 +26,7 @@ static String id='register_screen';
           else if(state is RegisterSuccess){
             Navigator.pushReplacementNamed(
               context,
-              ChatScreen.id,
+               ChatPage.id,
               arguments: email,
             );
           }

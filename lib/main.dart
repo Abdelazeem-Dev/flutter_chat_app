@@ -1,7 +1,7 @@
 import 'package:chat_app/cubit/cubit/register_cubit.dart';
 import 'package:chat_app/cubit/login_cubit.dart';
-import 'package:chat_app/screen/chat_screen.dart';
-import 'package:chat_app/screen/login_screen.dart';
+import 'package:chat_app/screen/chat_page.dart';
+ import 'package:chat_app/screen/login_screen.dart';
 import 'package:chat_app/screen/register_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,8 +22,7 @@ class ChatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-       
-       providers: [
+      providers: [
         BlocProvider(
             create: (context) => LoginCubit(),
           ),
@@ -35,7 +34,7 @@ class ChatApp extends StatelessWidget {
         routes: {
           LoginScreen.id: (context) => LoginScreen(),
           RegisterScreen.id: (context) => RegisterScreen(),
-          ChatScreen.id: (context) => ChatScreen(),
+          ChatPage.id: (context) => ChatPage(),
         },
         initialRoute: LoginScreen.id,
       ),

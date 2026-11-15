@@ -1,4 +1,5 @@
 import 'package:chat_app/cubit/login_cubit.dart';
+import 'package:chat_app/screen/chat_page.dart';
 import 'package:chat_app/screen/register_screen.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text.dart';
@@ -10,8 +11,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../helper/show_snack_bar.dart';
 import '../models/text_model.dart';
 import '../widgets/custom_textfield.dart';
-import 'chat_screen.dart';
-
+ 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
         else if(state is LoginSuccess){
            Navigator.pushReplacementNamed(
             context,
-            ChatScreen.id,
+          ChatPage.id,
             arguments: email,
           );
         }
